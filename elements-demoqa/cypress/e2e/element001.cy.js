@@ -1,3 +1,5 @@
+import ModuloElemento from '../pages_object/page_element';
+
 // Describe la suite de pruebas para la página de DemoQA
 describe('DemoQA Elements Page Navigation', () => {
   // Prueba para verificar la navegación a la sección Elements
@@ -6,7 +8,7 @@ describe('DemoQA Elements Page Navigation', () => {
     cy.visit('https://demoqa.com/');
 
     // Buscar y hacer clic en el elemento 'Elements'
-    cy.contains('Elements').click();
+    ModuloElemento.click_elemento()
     // Opcional: verificar que el encabezado o algún elemento específico esté visible
     cy.get('.header-text').should('be.visible').and('contain.text', 'Elements');
 
